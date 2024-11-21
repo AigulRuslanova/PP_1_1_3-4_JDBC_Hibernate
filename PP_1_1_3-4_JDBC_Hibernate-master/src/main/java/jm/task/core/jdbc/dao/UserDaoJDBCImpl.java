@@ -7,6 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+//fixme расстояние между названием класса и конструктором хотя бы 1 строку нужно
 public class UserDaoJDBCImpl implements UserDao {
     public UserDaoJDBCImpl() {
 
@@ -48,6 +49,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     }
 
+    //fixme выровнять код
     public void removeUserById(long id) {
         String sql = "DELETE FROM users WHERE id = ?";
         try (Connection connection = Util.getConnection();PreparedStatement preparedStatement = connection.prepareStatement(sql)) {
@@ -83,6 +85,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public void cleanUsersTable() {
         String sql = "TRUNCATE TABLE users";
         try (Connection connection = Util.getConnection(); Statement statement = connection.createStatement()) {
+            //fixme неиспользуемая переменная
             int rowsAffected = statement.executeUpdate(sql);
 
 

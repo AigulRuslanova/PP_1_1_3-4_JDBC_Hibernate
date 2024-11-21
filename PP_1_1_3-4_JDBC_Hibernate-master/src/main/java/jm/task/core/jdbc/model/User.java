@@ -5,6 +5,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Table
+//fixme расстояние между названием класса и полями хотя бы 1 строка
 public class User {
     @Id
     private Long id;

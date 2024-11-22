@@ -2,8 +2,9 @@ package jm.task.core.jdbc.util;
 
 import java.sql.*;
 
-//fixme расстояние между полями и названием класса хотя бы 1 строку
 public class Util {
+
+
     private static final String URL = "jdbc:mysql://localhost:3306/default";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "root";

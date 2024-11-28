@@ -62,7 +62,7 @@ public class UserDaoHibernateImpl implements UserDao {
 
         User user = session.get(User.class, id);
 
-        if (user != null){
+        if (user != null) {
             session.delete(user);
         }
         transaction.commit();

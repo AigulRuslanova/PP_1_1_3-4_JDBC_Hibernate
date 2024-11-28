@@ -21,11 +21,10 @@ public class Util {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(URL, USERNAME, PASSWORD);
-        }
-        catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Не удалось подключиться к базе");
         }
-       return connection;
+        return connection;
     }
 
     public static SessionFactory getSessionFactory() {
@@ -39,7 +38,7 @@ public class Util {
             properties.setProperty("show_sql", "true");
 
             Configuration configuration = new Configuration();
-             configuration.addAnnotatedClass(User.class);
+            configuration.addAnnotatedClass(User.class);
             sessionFactory = configuration.addProperties(properties).buildSessionFactory();
         }
         return sessionFactory;
